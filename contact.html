@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -16,9 +17,8 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h2>Contact Form</h2>
-        <form action="submit-form.php" method="post">
+    <section class="section-flex form-container">
+        <form action="submit-form.php" method="post" class="left-column">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
             <label for="email">Email:</label>
@@ -33,10 +33,13 @@
             <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
             <button type="submit">Submit</button>
         </form>
+        <div class="right-column">
+            <h3>Contact Information</h3>
+            <p>Alternatively, email me at: sadows40@msu.edu</p>
+        </div>
     </section>
     <footer>
-        <p>Alternatively, email me at: sadows40@msu.edu</p>
+        <p>Contact me at: your-email@example.com</p>
     </footer>
 </body>
 </html>
-
