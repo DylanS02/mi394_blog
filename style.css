@@ -1,1 +1,159 @@
+/* Basic reset and global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section and article styles */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+article h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+article p {
+    line-height: 1.8;
+}
+
+/* Image styles */
+.image-size {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Flexbox layouts */
+.section-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-column {
+    flex-basis: 70%;
+    padding-right: 20px;
+}
+
+.right-column {
+    flex-basis: 25%;
+}
+
+/* Sticky navigation */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+}
+
+/* Multi-column form layout using Flexbox */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-container label {
+    flex-basis: 100%;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    flex-basis: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.form-container select {
+    flex-basis: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.form-container button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #555;
+}
 
