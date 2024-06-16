@@ -38,6 +38,9 @@ h1, h2, h3 {
 #navbar {
     background-color: #333;
     overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 #navbar ul {
@@ -79,93 +82,4 @@ header, nav, section, footer {
     padding: 0 20px;
 }
 
-header h1 {
-    margin: 0;
-}
-
-section {
-    margin: 20px;
-}
-
-/* Typography */
-p {
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-/* Advanced layout techniques */
-.nav-sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.main-content {
-    flex: 2;
-    margin: 0 20px;
-}
-
-.sidebar {
-    flex: 1;
-    padding: 15px;
-}
-
-.left-sidebar {
-    margin-right: 20px;
-}
-
-.right-sidebar {
-    margin-left: 20px;
-}
-
-.float-image {
-    float: right;
-    margin: 0 0 10px 20px;
-}
-
-.flex-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-form .form-group {
-    flex: 1 1 300px;
-    margin: 10px;
-}
-
-.flex-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.flex-form input, .flex-form select, .flex-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.flex-form button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.flex-form button:hover {
-    background-color: #45a049;
-}
-
-/* Greyed out sections */
-.greyed-out {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-}
+header
