@@ -100,32 +100,27 @@ p {
     z-index: 1000;
 }
 
-.two-column {
+.content-wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.two-column .main {
+.main-content {
     flex: 2;
-    margin-right: 20px;
-}
-
-.two-column .sidebar {
-    flex: 1;
-}
-
-.three-column {
-    display: flex;
-    justify-content: space-between;
-}
-
-.three-column .middle {
-    flex: 3;
     margin: 0 20px;
 }
 
-.three-column .side {
+.sidebar {
     flex: 1;
+    padding: 15px;
+}
+
+.left-sidebar {
+    margin-right: 20px;
+}
+
+.right-sidebar {
+    margin-left: 20px;
 }
 
 .float-image {
@@ -172,6 +167,5 @@ p {
 /* Greyed out sections */
 .greyed-out {
     background-color: #e0e0e0;
-    padding: 15px;
     border-radius: 5px;
 }
