@@ -1,5 +1,6 @@
 /* styles.css */
 
+/* Existing styles for .floating-box and .floating-box-2 */
 .floating-box {
     position: fixed;
     top: 20px;
@@ -97,4 +98,35 @@
 
 .left-align {
     text-align: left;
+}
+
+/* New styles for footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
 }
