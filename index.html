@@ -29,8 +29,8 @@
             position: fixed;
             top: 170px; /* 150 pixels below the first box (20px + 150px) */
             right: 20px;
-            width: 300px;
-            height: 400px;
+            width: 200px;
+            height: 300px;
             background-image: url('https://news.uchicago.edu/sites/default/files/images/2022-10/sgr%20A%2A%20ESO%20and%20M.%20Kornmesser%20690.jpg');
             background-size: cover;
             background-position: center;
@@ -43,7 +43,17 @@
             color: white;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for readability */
             padding-bottom: 10px; /* Adjust padding for caption */
-            transition: width 0.3s, height 0.3s;
+            transition: width 0.3s, height 0.3s, opacity 0.3s;
+        }
+
+        .floating-box-2.shrunk {
+            width: 50px;
+            height: 50px;
+            align-items: center;
+        }
+
+        .floating-box-2.shrunk .caption {
+            display: none;
         }
 
         .floating-box-2:hover {
@@ -73,21 +83,19 @@
     <div class="floating-box"></div>
 
     <div class="floating-box-2" id="floatingBox2">
-        <button class="arrow" id="toggleButton">&#9650;</button>
-        <span>Watch how a black hole distorts light!</span>
+        <button class="arrow" id="toggleButton">&#9660;</button>
+        <span class="caption">Watch how a black hole distorts light!</span>
     </div>
 
     <script>
         document.getElementById('toggleButton').addEventListener('click', function() {
             const floatingBox = document.getElementById('floatingBox2');
-            if (floatingBox.style.width === '50px') {
-                floatingBox.style.width = '300px';
-                floatingBox.style.height = '400px';
-                this.innerHTML = '&#9650;'; // Up arrow
-            } else {
-                floatingBox.style.width = '50px';
-                floatingBox.style.height = '50px';
+            if (floatingBox.classList.contains('shrunk')) {
+                floatingBox.classList.remove('shrunk');
                 this.innerHTML = '&#9660;'; // Down arrow
+            } else {
+                floatingBox.classList.add('shrunk');
+                this.innerHTML = '&#9650;'; // Up arrow
             }
         });
     </script>
