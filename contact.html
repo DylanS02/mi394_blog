@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Your existing CSS styles */
         body {
             margin: 0; /* Reset default margin */
+            padding-bottom: 60px; /* Adjust as needed to accommodate footer height */
         }
         .floating-box {
             position: fixed;
@@ -81,10 +82,12 @@
             padding: 10px 0;
             text-align: center;
             color: white;
+            z-index: 1000; /* Ensure it appears above other content */
         }
         footer nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         footer nav ul li {
             display: inline;
