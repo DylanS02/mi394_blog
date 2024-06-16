@@ -73,12 +73,14 @@ a[href]:hover {
     text-decoration: underline;
 }
 
-/* Basic layout modifications */
-header, footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* Layout */
+header, nav, section, footer {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
 }
 
 section {
