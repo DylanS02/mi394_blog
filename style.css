@@ -1,22 +1,31 @@
-/* styles.css */
-
-/* Sticky navigation header */
-.nav-sticky {
+/* Floating Box CSS */
+.floating-box {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://pbs.twimg.com/profile_images/996473086361919489/nU_DabyM_400x400.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+    z-index: 1000; /* Ensure the box appears above other content */
 }
 
-/* Main content section */
+.floating-box:hover {
+    transform: scale(1.1); /* Optional: Scale effect on hover */
+}
+
+/* Ensure content doesn't shift */
 .two-column {
+    max-width: 800px;
+    margin: 80px auto 20px; /* Adjust top margin to accommodate floating box */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    margin-top: 70px; /* Adjust according to your header height */
+    align-items: flex-start;
 }
 
 .main {
@@ -25,64 +34,10 @@
 }
 
 .sidebar {
-    flex: 0 0 200px; /* Fixed width for the sidebar */
-    position: relative; /* Important for containing the fixed navigation */
-}
-
-.sidebar .fixed-nav {
-    position: sticky;
-    top: 20px; /* Adjust according to your header height */
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 200px; /* Width of the fixed navigation box */
-    float: right; /* Align to the right */
-    margin-top: 20px; /* Adjust as needed */
-}
-
-.sidebar .fixed-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar .fixed-nav li {
-    margin-bottom: 10px;
-}
-
-.three-column {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.middle {
-    flex: 1;
-    margin: 0 10px;
-}
-
-.table-style {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ddd; /* Add borders to tables */
-}
-
-.table-style th, .table-style td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    flex: 0 0 200px; /* Fixed width sidebar */
 }
 
 .image-size {
-    width: 100%; /* Ensures images fill their container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevents images from exceeding their natural size */
-    display: block; /* Ensures images behave as block elements */
+    max-width: 100%;
+    height: auto;
 }
-
-.float-image {
-    float: left;
-    margin-right: 10px;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .two
