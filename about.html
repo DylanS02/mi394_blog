@@ -6,6 +6,12 @@
     <title>About Me</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
         /* Floating Box CSS */
         .floating-box {
             position: fixed;
@@ -35,13 +41,25 @@
         }
 
         .main {
-            flex: 0 0 60%; /* Set the main content width */
-            margin-right: 20px; /* Add margin to separate from sidebar */
+            flex: 1;
+            margin-right: 20px;
         }
 
         .image-size {
             max-width: 100%;
             height: auto;
+        }
+
+        /* Adjustments for small screens */
+        @media (max-width: 600px) {
+            .two-column {
+                flex-direction: column; /* Stack columns on small screens */
+                align-items: center; /* Center content vertically on small screens */
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+            .main {
+                margin-right: 0; /* Remove margin on small screens */
+            }
         }
     </style>
 </head>
