@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Your existing CSS styles */
         body {
-            margin: 0;
-            padding-bottom: 60px; /* Adjust as needed to accommodate footer height */
+            margin: 0; /* Reset default margin */
         }
         .floating-box {
             position: fixed;
@@ -22,98 +21,136 @@
             background-position: center;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-css
-Copy code
-    .floating-box:hover {
-        transform: scale(1.1); 
-    }
 
-    .main {
-        flex: 0 0 60%;
-        margin-right: 0px; 
-    }
+        .floating-box:hover {
+            transform: scale(1.1);
+        }
 
-    .image-size {
-        width: 200px; 
-        height: 250px; 
-        display: block;
-        margin: 0 0 10px 0; 
-    }
+        .flex-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
 
-    .left-align {
-        text-align: left;
-    }
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-    footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        padding: 10px 0;
-        text-align: center;
-        color: white;
-        z-index: 1000; /* Ensure it appears above other content */
-    }
-    footer nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    footer nav ul li {
-        display: inline;
-        margin: 0 10px;
-    }
-    footer nav ul li a {
-        color: white;
-        text-decoration: none;
-    }
-    footer nav ul li a:hover {
-        text-decoration: underline;
-    }
-</style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+        footer nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        footer nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="floating-box"></div>
-php
-Copy code
-<header id="navbar" class="nav-sticky">
-    <h1>About Me</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
 
-<section>
-    <div class="two-column">
-        <div class="main">
-            <h2>Dylan Sadowski</h2>
-            <img src="https://github.com/DylanS02/mi394_blog/raw/main/author_picture.jpg" alt="Author Image" class="image-size">
-            <p class="left-align">My name is Dylan Sadowski and I am writing this blog for my MI394 class. I just graduated this spring; however, I am still currently enrolled in summer classes.</p>
-            <p class="left-align">My major is in Interactive Media and Game Design and I plan on becoming a video game developer. Here is a list of my set of skills:</p>
-            <ul class="left-align">
-                <li>Unity (Game Engine)</li>
-                <li>GitHub/GitLab</li>
-                <li>C#/HTML Programming</li>
+    <header id="navbar" class="nav-sticky">
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
-    </div>
-</section>
+        </nav>
+    </header>
 
-<footer>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</footer>
+    <section>
+        <h2>Contact Form</h2>
+        <form action="submit-form.php" method="post" class="flex-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for contact:</label>
+                <select id="reason" name="reason">
+                    <option value="hi">Saying Hi</option>
+                    <option value="contractor">Looking for a Contractor</option>
+                    <option value="interview">Interested in an Interview</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
 </body>
 </html>
