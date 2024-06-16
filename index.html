@@ -5,8 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Home</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Floating Box CSS */
+        .floating-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .floating-box a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            text-align: center;
+        }
+
+        .floating-box a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 <body>
+    <!-- Floating Box for Navigation Links -->
+    <div class="floating-box">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Rest of your existing HTML content -->
     <header id="navbar" class="nav-sticky">
         <h1>Black Holes vs. Neutron Stars: What Sets These Cosmic Phenomena Apart?</h1>
         <nav>
