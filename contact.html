@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Your existing CSS styles */
         body {
-            margin: 0; /* Reset default margin */
+            margin: 0;
+            padding-bottom: 60px; /* Adjust as needed to accommodate footer height */
         }
         .floating-box {
             position: fixed;
@@ -21,55 +21,27 @@
             background-position: center;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
         }
 
         .floating-box:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); 
         }
 
-        .flex-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #f9f9f9;
+        .main {
+            flex: 0 0 60%;
+            margin-right: 0px; 
         }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
+        .image-size {
+            width: 200px; 
+            height: 250px; 
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin: 0 0 10px 0; 
         }
 
-        input[type="text"],
-        input[type="email"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 8px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button[type="submit"] {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #45a049;
+        .left-align {
+            text-align: left;
         }
 
         footer {
@@ -81,10 +53,12 @@
             padding: 10px 0;
             text-align: center;
             color: white;
+            z-index: 1000; /* Ensure it appears above other content */
         }
         footer nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         footer nav ul li {
             display: inline;
@@ -114,32 +88,17 @@
     </header>
 
     <section>
-        <h2>Contact Form</h2>
-        <form action="submit-form.php" method="post" class="flex-form">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <div class="two-column">
+            <div class="main">
+                <h2>Contact Information</h2>
+                <p class="left-align">Feel free to reach out to me using the information below:</p>
+                <ul class="left-align">
+                    <li>Email: dylan.sadowski@example.com</li>
+                    <li>Phone: +1 123-456-7890</li>
+                    <li>Address: 123 Contact Street, City, Country</li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="reason">Reason for contact:</label>
-                <select id="reason" name="reason">
-                    <option value="hi">Saying Hi</option>
-                    <option value="contractor">Looking for a Contractor</option>
-                    <option value="interview">Interested in an Interview</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+        </div>
     </section>
 
     <footer>
