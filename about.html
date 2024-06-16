@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-size {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,25 +34,19 @@
             </ul>
         </nav>
     </header>
-    <section class="section-flex">
-        <div class="left-column">
-            <h2>Dylan Sadowski</h2>
-            <img src="https://github.com/DylanS02/mi394_blog/raw/main/author_picture.jpg" alt="Author Image" class="image-size">
-            <p>My name is Dylan Sadowski and I am writing this blog for my MI394 class. I just graduated this spring; however, I am currently enrolled in summer classes.</p>
-            <p>My major is in Interactive Media and Game Design, and I plan on becoming a video game developer. Here is a list of my set of skills:</p>
-            <ul>
-                <li>Unity (Game Engine)</li>
-                <li>GitHub/GitLab</li>
-                <li>C#/HTML Programming</li>
-            </ul>
-        </div>
-        <div class="right-column">
-            <h3>Contact Information</h3>
-            <p>Email: sadows40@msu.edu</p>
-        </div>
+    <section>
+        <h2>Dylan Sadowski</h2>
+        <!-- Updated img tag with the correct "raw" URL and class for size -->
+        <img src="https://github.com/DylanS02/mi394_blog/raw/main/author_picture.jpg" alt="Author Image" class="image-size">
+        <p>My name is Dyaln Sadowski and I am writing this blog for my MI394 class. I just graduated this spring however I am currently enrolled in summer classes.</p>
+        <p>My major is in Interactive Media and Game Design and I plan on becoming a video game developer. Here is a list of my set of skills:</p>
+        <ul>
+            <li>Unity (Game Engine)</li>
+            <li>GitHub/GitLab</li>
+            <li>C#/HTML Programming</li>
+        </ul>
     </section>
     <footer>
-        <p>Contact me at: your-email@example.com</p>
     </footer>
 </body>
 </html>
