@@ -166,3 +166,10 @@ p {
 .flex-form button:hover {
     background-color: #45a049;
 }
+
+/* Greyed out sections */
+.greyed-out {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+}
