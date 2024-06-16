@@ -6,6 +6,10 @@
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Your existing CSS styles */
+        body {
+            margin: 0; /* Reset default margin */
+        }
         .floating-box {
             position: fixed;
             top: 20px;
@@ -67,6 +71,32 @@
         button[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+        footer nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        footer nav ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -82,6 +112,7 @@
             </ul>
         </nav>
     </header>
+
     <section>
         <h2>Contact Form</h2>
         <form action="submit-form.php" method="post" class="flex-form">
@@ -110,8 +141,16 @@
             </div>
         </form>
     </section>
+
     <footer>
-        <p>Alternatively, email me at: sadows40@msu.edu</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </footer>
+
 </body>
 </html>
