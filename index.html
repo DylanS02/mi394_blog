@@ -7,7 +7,6 @@
     <title>Blog Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Floating Box CSS */
         .floating-box {
             position: fixed;
             top: 20px;
@@ -19,16 +18,16 @@
             background-position: center;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         
     .floating-box:hover {
-        transform: scale(1.1); /* Optional: Scale effect on hover */
+        transform: scale(1.1); 
     }
 
     .floating-box-2 {
         position: fixed;
-        top: 170px; /* 150 pixels below the first box (20px + 150px) */
+        top: 170px; 
         right: 20px;
         width: 300px;
         height: 200px;
@@ -37,13 +36,13 @@
         background-position: center;
         border-radius: 10px;
         cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
         display: flex;
         align-items: flex-end;
         justify-content: center;
         color: white;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for readability */
-        padding-bottom: 10px; /* Adjust padding for caption */
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); 
+        padding-bottom: 10px; 
         transition: width 0.3s, height 0.3s, opacity 0.3s;
     }
 
@@ -58,7 +57,7 @@
     }
 
     .floating-box-2:hover {
-        transform: scale(1.05); /* Optional: Scale effect on hover */
+        transform: scale(1.05); 
     }
 
     .arrow {
@@ -78,7 +77,6 @@
         font-size: 20px;
     }
 
-    /* Table Styles */
     .table-style {
         width: 100%;
         border-collapse: collapse;
@@ -96,12 +94,11 @@
         text-align: left;
     }
 
-    /* Image Styles */
     .image-size {
-        width: 400px; /* Set a fixed width */
-        height: 250px; /* Set a fixed height */
+        width: 400px; 
+        height: 250px; 
         display: block;
-        margin: 0 0 10px 0; /* Add margin to separate image and text */
+        margin: 0 0 10px 0; 
     }
 
     .left-align {
@@ -110,7 +107,6 @@
 </style>
 </head>
 <body>
-    <!-- Floating Box with Image -->
     <div class="floating-box"></div>
 <div class="floating-box-2" id="floatingBox2">
     <button class="arrow" id="toggleButton">&#9660;</button>
@@ -122,15 +118,14 @@
         const floatingBox = document.getElementById('floatingBox2');
         if (floatingBox.classList.contains('shrunk')) {
             floatingBox.classList.remove('shrunk');
-            this.innerHTML = '&#9660;'; // Down arrow
+            this.innerHTML = '&#9660;'; 
         } else {
             floatingBox.classList.add('shrunk');
-            this.innerHTML = '&#9650;'; // Up arrow
+            this.innerHTML = '&#9650;'; 
         }
     });
 </script>
 
-<!-- Rest of your existing HTML content -->
 <header id="navbar" class="nav-sticky">
     <h1>Black Holes vs. Neutron Stars: What Sets These Cosmic Phenomena Apart?</h1>
     <nav>
@@ -179,13 +174,9 @@
             </tbody>
         </table>
     </article>
-    <aside class="sidebar">
-        <!-- Sidebar content -->
     </aside>
 </section>
 <section class="three-column">
-    <article class="side">
-        <!-- Left side content -->
     </article>
     <article class="middle">
         <h2>Comparing Black Holes and Neutron Stars</h2>
@@ -224,12 +215,9 @@
             </tbody>
         </table>
     </article>
-    <article class="side">
-        <!-- Right side content -->
     </article>
 </section>
 <footer>
-    <!-- Footer content -->
 </footer>
 </body>
 </html>
