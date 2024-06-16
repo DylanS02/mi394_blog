@@ -19,6 +19,7 @@
             border-radius: 50%;
             cursor: pointer;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+            z-index: 1000; /* Ensure the box appears above other content */
         }
 
         .floating-box:hover {
@@ -31,7 +32,7 @@
             justify-content: space-between;
             align-items: flex-start;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 80px auto 20px; /* Adjust top margin to accommodate floating box */
             padding: 20px;
         }
 
