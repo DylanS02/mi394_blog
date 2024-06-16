@@ -43,6 +43,26 @@
             max-width: 75%;
             height: 25%;
         }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0; /* Example background color */
+            padding: 10px 20px;
+            margin-bottom: 20px; /* Optional: Add margin to separate from content */
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -50,7 +70,9 @@
     <div class="floating-box"></div>
 
     <header id="navbar" class="nav-sticky">
-        <h1>About Me</h1>
+        <div>
+            <h1>About Me</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -59,6 +81,7 @@
             </ul>
         </nav>
     </header>
+
     <section>
         <div class="two-column">
             <div class="main">
@@ -74,6 +97,7 @@
             </div>
         </div>
     </section>
+
     <footer>
         <!-- Footer content -->
     </footer>
