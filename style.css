@@ -13,16 +13,18 @@ h1, h2, h3 {
 
 /* Class selectors */
 .image-size {
-    width: 400px;
-    height: 300px;
+    width: 100%; /* Ensure images take full width of container */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     margin-bottom: 15px;
+    border: 1px solid #ddd; /* Add border around images */
 }
 
 .table-style {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    border: 1px solid #ddd; /* Add border around tables */
 }
 
 .table-style th, .table-style td {
@@ -82,4 +84,24 @@ header, nav, section, footer {
     padding: 0 20px;
 }
 
-header
+.content-wrapper {
+    display: flex; /* Use flexbox for two-column layout */
+}
+
+.left-sidebar,
+.right-sidebar {
+    width: 25%; /* Adjust sidebar width as needed */
+    padding: 10px;
+    background-color: #f2f2f2;
+    margin-right: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar {
+    margin-bottom: 20px;
+}
+
+.main-content {
+    width: 75%; /* Adjust main content width */
+}
