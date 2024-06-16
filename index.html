@@ -27,10 +27,10 @@
 
         .floating-box-2 {
             position: fixed;
-            top: 170px;
+            top: 170px; /* 150 pixels below the first box (20px + 150px) */
             right: 20px;
             width: 300px;
-            height: 200px;
+            height: 400px;
             background-image: url('https://news.uchicago.edu/sites/default/files/images/2022-10/sgr%20A%2A%20ESO%20and%20M.%20Kornmesser%20690.jpg');
             background-size: cover;
             background-position: center;
@@ -43,45 +43,54 @@
             color: white;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for readability */
             padding-bottom: 10px; /* Adjust padding for caption */
+            transition: width 0.3s, height 0.3s;
         }
 
         .floating-box-2:hover {
             transform: scale(1.05); /* Optional: Scale effect on hover */
         }
 
-        /* Table styles */
-        .table-style {
-            width: 100%;
-            border-collapse: collapse; /* Ensure cells are not separated */
-            margin-bottom: 20px; /* Space between tables */
-        }
-
-        .table-style th, .table-style td {
-            border: 1px solid #ccc; /* Border around cells */
-            padding: 8px; /* Padding inside cells */
-            text-align: left; /* Left align text in cells */
-        }
-
-        .table-style caption {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Image styles */
-        .image-size {
-            width: 300px;
-            height: 200px;
-            object-fit: cover; /* Ensures the image covers the specified dimensions */
-            display: block;
-            margin-bottom: 10px; /* Optional: Adjust margin */
+        .arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
     <!-- Floating Box with Image -->
     <div class="floating-box"></div>
-    <!-- Second Floating Box with Image and Caption -->
-    <div class="floating-box-2">Watch how a black hole distorts light!</div>
+
+    <div class="floating-box-2" id="floatingBox2">
+        <button class="arrow" id="toggleButton">&#9650;</button>
+        <span>Watch how a black hole distorts light!</span>
+    </div>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            const floatingBox = document.getElementById('floatingBox2');
+            if (floatingBox.style.width === '50px') {
+                floatingBox.style.width = '300px';
+                floatingBox.style.height = '400px';
+                this.innerHTML = '&#9650;'; // Up arrow
+            } else {
+                floatingBox.style.width = '50px';
+                floatingBox.style.height = '50px';
+                this.innerHTML = '&#9660;'; // Down arrow
+            }
+        });
+    </script>
 
     <!-- Rest of your existing HTML content -->
     <header id="navbar" class="nav-sticky">
