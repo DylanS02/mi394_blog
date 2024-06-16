@@ -6,6 +6,10 @@
     <title>About Me</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Your existing CSS styles */
+        body {
+            margin: 0; /* Reset default margin */
+        }
         .floating-box {
             position: fixed;
             top: 20px;
@@ -23,9 +27,9 @@
         .floating-box:hover {
             transform: scale(1.1); 
         }
-        
+
         .main {
-            flex: 0 0 60%; 
+            flex: 0 0 60%;
             margin-right: 0px; 
         }
 
@@ -38,6 +42,32 @@
 
         .left-align {
             text-align: left;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+        }
+        footer nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        footer nav ul li a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -54,6 +84,7 @@
             </ul>
         </nav>
     </header>
+
     <section>
         <div class="two-column">
             <div class="main">
@@ -69,7 +100,16 @@
             </div>
         </div>
     </section>
+
     <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </footer>
+
 </body>
 </html>
