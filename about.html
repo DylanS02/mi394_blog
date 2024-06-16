@@ -28,20 +28,15 @@
         /* Additional styles specific to this page */
         .two-column {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            justify-content: flex-end; /* Align content to the right */
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
 
         .main {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        .sidebar {
-            flex: 0 0 200px; /* Fixed width sidebar */
+            flex: 0 0 60%; /* Set the main content width */
+            margin-left: 20px; /* Add margin to separate from sidebar */
         }
 
         .image-size {
@@ -76,9 +71,6 @@
                     <li>GitHub/GitLab</li>
                     <li>C#/HTML Programming</li>
                 </ul>
-            </div>
-            <div class="sidebar">
-                <!-- Sidebar content can be added here -->
             </div>
         </div>
     </section>
