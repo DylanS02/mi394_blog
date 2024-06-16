@@ -8,6 +8,7 @@
     <style>
         body {
             margin: 0;
+            padding-bottom: 60px; /* Adjust as needed to accommodate footer height */
         }
         .floating-box {
             position: fixed;
@@ -52,10 +53,12 @@
             padding: 10px 0;
             text-align: center;
             color: white;
+            z-index: 1000; /* Ensure it appears above other content */
         }
         footer nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         footer nav ul li {
             display: inline;
