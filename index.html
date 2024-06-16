@@ -25,6 +25,30 @@
             transform: scale(1.1); /* Optional: Scale effect on hover */
         }
 
+        .floating-box-2 {
+            position: fixed;
+            top: 520px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-image: url('https://news.uchicago.edu/sites/default/files/images/2022-10/sgr%20A%2A%20ESO%20and%20M.%20Kornmesser%20690.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for readability */
+            padding-bottom: 10px; /* Adjust padding for caption */
+        }
+
+        .floating-box-2:hover {
+            transform: scale(1.05); /* Optional: Scale effect on hover */
+        }
+
         /* Table styles */
         .table-style {
             width: 100%;
@@ -56,6 +80,8 @@
 <body>
     <!-- Floating Box with Image -->
     <div class="floating-box"></div>
+    <!-- Second Floating Box with Image and Caption -->
+    <div class="floating-box-2">Watch how a black hole distorts light!</div>
 
     <!-- Rest of your existing HTML content -->
     <header id="navbar" class="nav-sticky">
