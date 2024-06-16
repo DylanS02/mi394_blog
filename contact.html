@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="navbar" class="nav-sticky">
         <h1>Contact</h1>
         <nav>
             <ul>
@@ -18,20 +19,30 @@
     </header>
     <section>
         <h2>Contact Form</h2>
-        <form action="submit-form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="reason">Reason for contact:</label>
-            <select id="reason" name="reason">
-                <option value="hi">Saying Hi</option>
-                <option value="contractor">Looking for a Contractor</option>
-                <option value="interview">Interested in an Interview</option>
-            </select><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-            <button type="submit">Submit</button>
+        <form action="submit-form.php" method="post" class="flex-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for contact:</label>
+                <select id="reason" name="reason">
+                    <option value="hi">Saying Hi</option>
+                    <option value="contractor">Looking for a Contractor</option>
+                    <option value="interview">Interested in an Interview</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
         </form>
     </section>
     <footer>
