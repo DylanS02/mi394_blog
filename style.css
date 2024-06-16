@@ -1,3 +1,5 @@
+/* styles.css */
+
 .floating-box {
     position: fixed;
     top: 20px;
@@ -10,11 +12,11 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-    z-index: 1000; 
+    z-index: 1000; /* Ensure it appears above other content */
 }
 
 .floating-box:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Scale up on hover */
 }
 
 .floating-box-2 {
@@ -49,7 +51,7 @@
 }
 
 .floating-box-2:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 .arrow {
