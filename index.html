@@ -13,35 +13,22 @@
             right: 20px;
             width: 50px;
             height: 50px;
-            background-color: red;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            border-radius: 5px;
+            background-image: url('https://pbs.twimg.com/profile_images/996473086361919489/nU_DabyM_400x400.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
             cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
         }
 
-        .floating-box a {
-            text-decoration: none;
-            color: white;
-            display: block;
-            text-align: center;
-        }
-
-        .floating-box a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+        .floating-box:hover {
+            transform: scale(1.1); /* Optional: Scale effect on hover */
         }
     </style>
 </head>
 <body>
-    <!-- Floating Box for Navigation Links -->
-    <div class="floating-box">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </div>
+    <!-- Floating Box with Image -->
+    <div class="floating-box"></div>
 
     <!-- Rest of your existing HTML content -->
     <header id="navbar" class="nav-sticky">
