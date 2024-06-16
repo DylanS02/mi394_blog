@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,86 +21,64 @@
             cursor: pointer;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
         }
+css
+Copy code
+    .floating-box:hover {
+        transform: scale(1.1); /* Optional: Scale effect on hover */
+    }
 
-        .floating-box:hover {
-            transform: scale(1.1); /* Optional: Scale effect on hover */
-        }
+    /* Additional styles specific to this page */
+    .two-column {
+        display: flex;
+        justify-content: flex-start; /* Align content to the left */
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        /* Additional styles specific to this page */
-        .two-column {
-            display: flex;
-            justify-content: flex-start; /* Align content to the left */
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .main {
+        flex: 0 0 60%; /* Set the main content width */
+        margin-right: 0px; /* Add margin to separate from sidebar */
+    }
 
-        .main {
-            flex: 0 0 60%; /* Set the main content width */
-            margin-right: 0px; /* Add margin to separate from sidebar */
-        }
-
-        .image-size {
-            max-width: 75%;
-            height: 25%;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f0f0f0; /* Example background color */
-            padding: 10px 20px;
-            margin-bottom: 20px; /* Optional: Add margin to separate from content */
-        }
-
-        header nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-    </style>
+    .image-size {
+        max-width: 75%;
+        height: 25%;
+    }
+</style>
 </head>
 <body>
     <!-- Floating Box with Image -->
     <div class="floating-box"></div>
-
-    <header id="navbar" class="nav-sticky">
-        <div>
-            <h1>About Me</h1>
-        </div>
-        <nav>
+php
+Copy code
+<header id="navbar" class="nav-sticky">
+    <h1>About Me</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <div class="two-column">
+        <div class="main">
+            <h2>Dylan Sadowski</h2>
+            <img src="https://github.com/DylanS02/mi394_blog/raw/main/author_picture.jpg" alt="Author Image" class="image-size">
+            <p>My name is Dylan Sadowski and I am writing this blog for my MI394 class. I just graduated this spring; however, I am currently enrolled in summer classes.</p>
+            <p>My major is in Interactive Media and Game Design and I plan on becoming a video game developer. Here is a list of my set of skills:</p>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>Unity (Game Engine)</li>
+                <li>GitHub/GitLab</li>
+                <li>C#/HTML Programming</li>
             </ul>
-        </nav>
-    </header>
-
-    <section>
-        <div class="two-column">
-            <div class="main">
-                <h2>Dylan Sadowski</h2>
-                <img src="https://github.com/DylanS02/mi394_blog/raw/main/author_picture.jpg" alt="Author Image" class="image-size">
-                <p>My name is Dylan Sadowski and I am writing this blog for my MI394 class. I just graduated this spring; however, I am currently enrolled in summer classes.</p>
-                <p>My major is in Interactive Media and Game Design and I plan on becoming a video game developer. Here is a list of my set of skills:</p>
-                <ul>
-                    <li>Unity (Game Engine)</li>
-                    <li>GitHub/GitLab</li>
-                    <li>C#/HTML Programming</li>
-                </ul>
-            </div>
         </div>
-    </section>
-
-    <footer>
-        <!-- Footer content -->
-    </footer>
+    </div>
+</section>
+<footer>
+    <!-- Footer content -->
+</footer>
 </body>
 </html>
