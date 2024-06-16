@@ -31,10 +31,22 @@
 
 .sidebar .fixed-nav {
     position: sticky;
-    top: 70px; /* Adjust according to your header height */
+    top: 20px; /* Adjust according to your header height */
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     padding: 10px;
+    width: 200px; /* Width of the fixed navigation box */
+    float: right; /* Align to the right */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.sidebar .fixed-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .fixed-nav li {
+    margin-bottom: 10px;
 }
 
 .three-column {
@@ -72,4 +84,5 @@
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 768px
+@media screen and (max-width: 768px) {
+    .two
